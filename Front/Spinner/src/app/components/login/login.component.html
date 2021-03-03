@@ -1,0 +1,37 @@
+<section class="form-formu">
+
+
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600' rel='stylesheet' type='text/css'>
+<link href="//netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.css" rel="stylesheet">
+
+<div class="testbox">
+  <h1>INICIAR SESION</h1>
+<section class="form-formu">
+
+    <div *ngIf="load">
+        <form [formGroup]="form" (ngSubmit)="onSubmit()">
+
+            <div class="form-group">
+                <label for="exampleInputEmail1">Correo</label>
+                <input class="control" formControlName="email" type="email" i aria-describedby="emailHelp">
+            </div>
+
+            <div class="form-group">
+                <label for="exampleInputPassword1">Contraseña</label>
+                <input class="control" formControlName="password" type="password">
+            </div>
+            <button type="submit" class="boton">Ingresar</button>
+            
+            <a href="..." class="nav-link" style="color:black" [routerLink]="['/registro']"> Registrarse</a>
+            
+
+        </form>
+    </div>
+</section>
+
+
+<div class="text-center">
+    <div *ngIf="!load" class="spinner-border" role="status">
+        <span class="visually-hidden"></span>
+    </div>
+</div>
